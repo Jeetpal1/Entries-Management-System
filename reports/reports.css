@@ -1,0 +1,32 @@
+/*To set default style for body*/
+* {
+  font-size:14px;
+  font-family:arial;
+}
+
+/*Styling the filter form*/
+#reports_filter_form {
+  display: flex;
+  justify-content:space-around;
+  background-color:#CDCDCD;
+  color:#343434;
+}
+#project_id,#user_id, label {
+  padding:5px;
+  margin:10px;
+}
+/*Styling the table*/
+#results  {
+  width:100%;
+}
+#results thead tbody {
+  display: flex;
+  justify-content:space-around;
+}
+#results thead{
+  background-color:#CDCDCD;
+}
+#results td {
+  border-bottom:1px solid #CDCDCD;
+  padding:5px;
+}

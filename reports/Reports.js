@@ -13,6 +13,10 @@ class Reports {
 		this.company_id = company_id;
 
 		// INSERT YOUR CODE BELOW THIS LINE
+		if(this.projects!=undefined&&this.users!=undefined)
+		{
+			loadProjects();
+		}
 	}
 
 	/////////////////////////////////////////////
@@ -26,12 +30,19 @@ class Reports {
 	{
 		console.log('----- loadProjects -----');
 		// INSERT YOUR CODE BELOW THIS LINE
+		api.makeRequest('GET','acs/profile', {}, this.fillProjectsWithResponse);
 	}
 
 	fillProjectsWithResponse(xhr_response)
 	{
 		console.log('----- fillProjectsWithResponse -----', xhr_response);
 		// INSERT YOUR CODE BELOW THIS LINE
+		let tableBody = document.getElementById("results");
+		tableBody.insertAdjacentText('afterbegin','sdfjlkdsajvsdiovjawlekngflkwenr');
+		
+		/*for(let project in xhr_response){
+
+		}*/
 	}
 
 	handleProjectChange(event)

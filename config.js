@@ -12,7 +12,7 @@ let api_url = 'https://acs2909.lusciousorange.com/t-api/';
  * @todo: clear these
  */
 let api_key_time_tracking = ''; // PERSON A
-let api_key_reports       = ''; // PERSON B
+let api_key_reports       = 'qc1pg27-hsfxy9kqdc1z38r1-3810bd0'; // PERSON B
 let api_key_projects      = ''; // PERSON C
 
 
@@ -20,7 +20,7 @@ let api_key_projects      = ''; // PERSON C
  * @var {int} company_id
  * Your company ID, you must replace this is your value once you know your company ID
  */
-let company_id = 0;
+let company_id = 41;
 
 
 /**
@@ -45,6 +45,7 @@ function saveUserID(profile_object)
 {
 	console.log('----- saveUserID -----', profile_object);
 	// INSERT YOUR CODE BELOW THIS LINE
+	this.user_id = profile_object.user_id;
 }
 
 
