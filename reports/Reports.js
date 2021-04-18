@@ -110,7 +110,10 @@ class Reports {
 	{
 		console.log('----- loadTimeEntries -----');
 		// INSERT YOUR CODE BELOW THIS LINE
-	
+		for(let project in this.projects){
+			let pathForEntries = `projects/${this.projects[project].project_id}/entries`;
+			api.makeRequest('GET', pathForEntries, {}, this.fillTimeEntriesWithResponse.bind(this));
+		}
 		
 	}
 
