@@ -119,7 +119,7 @@ class Reports {
 			if (this.users != undefined && this.projects != undefined) {
 				this.loadTimeEntries();
 			}
-		}, 2000);
+		}, 1000);
 	}
 
 	fillUsersWithResponse(xhr_response) {
@@ -192,11 +192,10 @@ class Reports {
 	loadTimeEntries() {
 		console.log('----- loadTimeEntries -----');
 		// INSERT YOUR CODE BELOW THIS LINE
-		for (let project in this.projects) {
-			let pathForEntries = `projects/${this.projects[project].project_id}/entries`;
+		if (this.users != undefined && this.users != undefined) {
+			let pathForEntries = `companies/${this.company_id}/entries`;
 			api.makeRequest('GET', pathForEntries, {}, this.fillTimeEntriesWithResponse.bind(this));
 		}
-
 	}
 
 	fillTimeEntriesWithResponse(xhr_response) {
