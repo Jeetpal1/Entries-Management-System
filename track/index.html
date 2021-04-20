@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 	<head>
 		<meta charset="utf-8" />
 		<title>Track : ACS Final Group Project</title>
@@ -11,6 +12,7 @@
 		<link rel="stylesheet" href="../main.css" />
 		<link rel="stylesheet" href="track.css" />
 	</head>
+
 	<body>
 
 		<header>
@@ -22,26 +24,40 @@
 			</nav>
 
 		</header>
-		<div id="content_container">
 
+
+		<div id="content_container">
 			<h1>Track</h1>
 
 			<div id="timer_container">
-
 				<form id="track_form">
-					<label for="project_id">Project:</label>
-					<select name="project_id" id="project_id">
-						<option value="">Select a project</option>
-					</select>
-					<label for="description">Description:</label>
-					<input type="text" name="description" id="description"/>
+
+					<div class="selectList float-l">
+						<label for="project_id">Project:</label>
+						<select name="project_id" id="project_id"> <!-- list of projects filled with JS -->
+							<option value="">Select a project</option>
+						</select>
+					</div>
+
+					<div class="details float-l">
+						<label for="description">Description:</label> <!-- for someone to enter the details of the task they are
+						tracking. -->
+						<input type="text" name="description" id="description"/>
+					</div>
 				</form>
-				<a href="#"  id="start_button" >Start</a>
-				<a href="#" id="stop_button">Stop</a>
-				<div id="counter"></div>
 
-			</div>
+				<div class="clear-both link-btn">
+					<a href="#"  id="start_button" >Start</a>
+				</div>
+				<div class="link-btn">
+					<a href="#" id="stop_button">Stop</a>
+				</div>
 
-		</div>
+				<div class="clear-both"  id="counter"></div>
+			</div> <!-- END OF time_container -->
+
+		</div> <!-- END OF content_container -->
+
 	</body>
+
 </html>

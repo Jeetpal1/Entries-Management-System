@@ -1,0 +1,62 @@
+body
+{
+    background: #CDCDCD;
+    color: #343434;
+    font-style: arial;
+    font-size: 14px;
+}
+
+.float-l
+{
+    float: left;
+}
+.clear-both
+{
+    clear: both;
+}
+.selectList,.details
+{
+    width: 50%;
+}
+input[type=text], select
+{
+    padding: 5px;
+    margin: 10px;
+
+}
+
+.link-btn a
+{
+    text-align: center;
+    font-size: 28px;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px;
+    margin: 10px;
+    width: 100%;
+    display: inline-block;
+}
+.link-btn a:hover
+{
+    opacity: 0.8;
+}
+
+.link-btn #start_button
+{
+  margin: 10px 0;
+  background: #009900;
+}
+.link-btn #stop_button
+{
+    margin: 10px 0;
+    background: #990000;
+}
+
+/*...... Counter ......*/
+#counter
+{
+    margin: 10px;
+    font-family: "Courier", "Courier new", monospace;
+    font-size: 80px;
+    text-align: center;
+}

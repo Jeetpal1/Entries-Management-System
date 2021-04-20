@@ -11,7 +11,7 @@ let api_url = 'https://acs2909.lusciousorange.com/t-api/';
  * The three API keys for the three segments of the project. You must replace these YOUR KEYS for your respective roles.
  * @todo: clear these
  */
-let api_key_time_tracking = ''; // PERSON A
+let api_key_time_tracking = 'bqyrkt6-g1yc5684fkdwh3q0-v2bsc78'; // PERSON A
 let api_key_reports       = 'qc1pg27-hsfxy9kqdc1z38r1-3810bd0'; // PERSON B
 let api_key_projects      = ''; // PERSON C
 
