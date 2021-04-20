@@ -57,6 +57,10 @@ function showError(error_details)
 {
 	console.error('----- showError -----', error_details);
 	// INSERT YOUR CODE BELOW THIS LINE
+	let newDivToShowError = document.createElement('div');
+	newDivToShowError.classList.add('error_box');
+	document.body.appendChild(newDivToShowError);
+	newDivToShowError.insertAdjacentHTML('afterbegin',`<p>ERROR:${error_details.error_code}:${error_details.error_message}</p>`);
 }
 
 /////////////////////////////////////////////

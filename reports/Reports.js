@@ -172,7 +172,7 @@ class Reports {
 			if (this.users != undefined && this.projects != undefined) {
 				this.loadTimeEntries();
 			}
-		}, 1000);
+		}, 2000);
 	}
 
 	/**
