@@ -51,8 +51,7 @@ class Track {
         //saving current timestamp to localstorage
         localStorage.setItem( "timer_timestamp", new Date().getTime() );
         //showing stop button
-        let stopButton = document.getElementById("stop_button");
-        stopButton.classList.add("displayNo");
+        document.getElementById("stop_button").style.display = "";
     }
 
     stop(event)
