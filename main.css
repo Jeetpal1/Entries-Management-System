@@ -4,3 +4,72 @@
  // INSERT YOUR CODE BELOW THIS LINE
 
  */
+
+ /*to avoid browser's default margin and padding*/
+ * {
+    margin: 0;
+    padding: 0;
+  }  
+
+/*styling header tag*/
+header {
+    background-color: #366815;
+    width: 100%;
+    padding:10px;
+    display:flex;
+    flex-direction: column;
+    background-image: url("timer.svg");
+    background-origin: content-box;
+    background-repeat: no-repeat;
+    background-size: 0.7em;
+}
+
+/*styling header_title id*/
+#header_title {
+    align-self: flex-start;
+    color: white;
+    font-size: 24px;
+    padding-left: 40px;
+}
+
+/*styling nav tag which is inside header tag*/
+header nav {
+    align-self: flex-end;
+    
+}
+
+/*styling links that inside nav tag which is inside header tag*/
+header nav a {
+    color:white;
+    font-size: 14px;
+    padding: 5px;
+    margin: 10px;
+}
+
+/*styling when user hover mouse over the link buttons*/
+header nav a:hover{
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+/*to style current page menu which helps user to identity about current page*/
+.current_menu {
+    background-color: white;
+    color:#366815
+}
+
+/*style the content_container id*/
+#content_container {
+    width: 800px;
+    border: 2px solid #CDCDCD;
+    margin: 10px auto;
+    padding: 10px;
+}
+
+/*style h1 tag*/
+h1 {
+    background-color: #CDCDCD;
+    color:#343434;
+    padding:10px;
+    margin-bottom: 10px;
+    font-size: 32px;
+}

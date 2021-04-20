@@ -1,6 +1,7 @@
 /**
  * A class that handles anything to do with the Reports view
  */
+//Person B: Reports, Jeetpal Singh (3124275) 
 class Reports {
 	/**
 	 * creates Reports
