@@ -11,9 +11,9 @@ let api_url = 'https://acs2909.lusciousorange.com/t-api/';
  * The three API keys for the three segments of the project. You must replace these YOUR KEYS for your respective roles.
  * @todo: clear these
  */
-let api_key_time_tracking = 'bqyrkt6-g1yc5684fkdwh3q0-v2bsc78'; // PERSON A
-let api_key_reports       = 'qc1pg27-hsfxy9kqdc1z38r1-3810bd0'; // PERSON B
-let api_key_projects      = ''; // PERSON C
+ let api_key_time_tracking = 'bqyrkt6-g1yc5684fkdwh3q0-v2bsc78'; // PERSON A
+ let api_key_reports       = 'qc1pg27-hsfxy9kqdc1z38r1-3810bd0'; // PERSON B
+ let api_key_projects      = ''; // PERSON C
 
 
 /**
@@ -33,7 +33,7 @@ let company_id = 41;
  */
 let current_api_key = my_api_key || api_key_time_tracking || api_key_reports || api_key_projects;
 let my_api = new TimeTrackerApi(current_api_key, api_url);
-my_api.makeRequest('GET','acs/profile', {}, saveUserID);
+my_api.makeRequest('GET', 'acs/profile', {}, saveUserID);
 my_api = null;
 
 
@@ -41,11 +41,10 @@ my_api = null;
  * A function to save the user ID of the provide profile object
  * @param {object} profile_object
  */
-function saveUserID(profile_object)
-{
-	console.log('----- saveUserID -----', profile_object);
-	// INSERT YOUR CODE BELOW THIS LINE
-	this.user_id = profile_object.user_id;
+function saveUserID(profile_object) {
+    console.log('----- saveUserID -----', profile_object);
+    // INSERT YOUR CODE BELOW THIS LINE
+    this.user_id = profile_object.user_id;
 }
 
 
@@ -53,14 +52,13 @@ function saveUserID(profile_object)
  * A method that shows an error message on the screen
  * @param {object} error_details
  */
-function showError(error_details)
-{
-	console.error('----- showError -----', error_details);
-	// INSERT YOUR CODE BELOW THIS LINE
-	let newDivToShowError = document.createElement('div');
-	newDivToShowError.classList.add('error_box');
-	document.body.appendChild(newDivToShowError);
-	newDivToShowError.insertAdjacentHTML('afterbegin',`<p>ERROR:${error_details.error_code}:${error_details.error_message}</p>`);
+function showError(error_details) {
+    // INSERT YOUR CODE BELOW THIS LINE
+    let newDivToShowError = document.createElement('div');
+    newDivToShowError.classList.add('error_box');
+    document.body.appendChild(newDivToShowError);
+    newDivToShowError.insertAdjacentHTML('afterbegin',
+        `<p>ERROR:${error_details.error_code}:${error_details.error_message}</p>`);
 }
 
 /////////////////////////////////////////////
@@ -76,15 +74,14 @@ function showError(error_details)
  * @param {int} seconds
  * @returns {string} A time in the format of h:mm:ss
  */
-function convertSecondsToHoursMinutesSeconds(seconds)
-{
-	let hours = Math.floor(seconds/3600);
-	seconds -= hours*3600; // remove the hours seconds from the calculations
+function convertSecondsToHoursMinutesSeconds(seconds) {
+    let hours = Math.floor(seconds / 3600);
+    seconds -= hours * 3600; // remove the hours seconds from the calculations
 
-	let minutes = Math.floor(seconds / 60);
-	seconds -= minutes*60; // remove the hours seconds from the calculations
+    let minutes = Math.floor(seconds / 60);
+    seconds -= minutes * 60; // remove the hours seconds from the calculations
 
-	return hours + ':' + pad2Digits(minutes) + ":" + pad2Digits(seconds);
+    return hours + ':' + pad2Digits(minutes) + ":" + pad2Digits(seconds);
 }
 
 /**
@@ -92,12 +89,11 @@ function convertSecondsToHoursMinutesSeconds(seconds)
  * @param {int} timestamp
  * @returns {string}
  */
-function convertTimestampToDateFormat(timestamp)
-{
-	let d = new Date( parseInt(timestamp));
+function convertTimestampToDateFormat(timestamp) {
+    let d = new Date(parseInt(timestamp));
 
-	return d.getFullYear() + '-' + pad2Digits(d.getMonth() + 1) + '-' + pad2Digits(d.getDate())
-		+ ' ' + pad2Digits(d.getHours()) + ':' + pad2Digits(d.getMinutes()) + ':' + pad2Digits(d.getSeconds());
+    return d.getFullYear() + '-' + pad2Digits(d.getMonth() + 1) + '-' + pad2Digits(d.getDate())
+        + ' ' + pad2Digits(d.getHours()) + ':' + pad2Digits(d.getMinutes()) + ':' + pad2Digits(d.getSeconds());
 
 }
 
@@ -107,7 +103,6 @@ function convertTimestampToDateFormat(timestamp)
  * @param number
  * @return {string|*}
  */
-function pad2Digits(number)
-{
-	return (number < 10 ? '0' + number : number);
+function pad2Digits(number) {
+    return (number < 10 ? '0' + number : number);
 }

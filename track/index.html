@@ -1,63 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
 
-	<head>
-		<meta charset="utf-8" />
-		<title>Track : ACS Final Group Project</title>
-		<script src="../TimeTrackerApi.js"></script>
-		<script src="../my_api_key.js"></script>
-		<script src="../config.js"></script>
-		<script src="Track.js"></script>
-		<script src="init.js"></script>
-		<link rel="stylesheet" href="../main.css" />
-		<link rel="stylesheet" href="track.css" />
-	</head>
+<head>
+    <meta charset="utf-8"/>
+    <title>Track : ACS Final Group Project</title>
+    <script src="../TimeTrackerApi.js"></script>
+    <script src="../my_api_key.js"></script>
+    <script src="../config.js"></script>
+    <script src="Track.js"></script>
+    <script src="init.js"></script>
+    <link rel="stylesheet" href="../main.css"/>
+    <link rel="stylesheet" href="track.css"/>
+</head>
 
-	<body>
+<body>
 
-		<header>
-			<div id="header_title">Time Tracker</div>
-			<nav>
-				<a title="Track" class="current_menu" href="../reports/index.html">Track</a>
-				<a title="Report" class="" href="../reports/index.html">Reports</a>
-				<a title="Projects" class="" href="../projects/index.html">Projects</a>
-			</nav>
+<header>
+    <div id="header_title">Time Tracker</div>
+    <nav>
+        <a title="Track" class="current_menu" href="../reports/index.html">Track</a>
+        <a title="Report" class="" href="../reports/index.html">Reports</a>
+        <a title="Projects" class="" href="../projects/index.html">Projects</a>
+    </nav>
 
-		</header>
+</header>
 
 
-		<div id="content_container">
-			<h1>Track</h1>
+<div id="content_container">
+    <h1>Track</h1>
 
-			<div id="timer_container">
-				<form id="track_form">
+    <div id="timer_container">
+        <form id="track_form">
 
-					<div class="selectList float-l">
-						<label for="project_id">Project:</label>
-						<select name="project_id" id="project_id"> <!-- list of projects filled with JS -->
-							<option value="">Select a project</option>
-						</select>
-					</div>
+            <div class="selectList float-l">
+                <label for="project_id">Project:</label>
+                <select name="project_id" id="project_id"> <!-- list of projects filled with JS -->
+                    <option value="">Select a project</option>
+                </select>
+            </div>
 
-					<div class="details float-l">
-						<label for="description">Description:</label> <!-- for someone to enter the details of the task they are
+            <div class="details float-l">
+                <label for="description">Description:</label> <!-- for someone to enter the details of the task they are
 						tracking. -->
-						<input type="text" name="description" id="description"/>
-					</div>
-				</form>
+                <input type="text" name="description" id="description"/>
+            </div>
+        </form>
 
-				<div class="clear-both link-btn">
-					<a href="#"  id="start_button" >Start</a>
-				</div>
-				<div class="link-btn">
-					<a href="#" id="stop_button">Stop</a>
-				</div>
+        <div class="clear-both link-btn">
+            <a href="#" id="start_button">Start</a>
+        </div>
+        <div class="link-btn">
+            <a href="#" id="stop_button">Stop</a>
+        </div>
 
-				<div class="clear-both"  id="counter"></div>
-			</div> <!-- END OF time_container -->
+        <div class="clear-both" id="counter"></div>
+    </div> <!-- END OF time_container -->
 
-		</div> <!-- END OF content_container -->
+</div> <!-- END OF content_container -->
 
-	</body>
+</body>
 
 </html>

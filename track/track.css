@@ -31,7 +31,7 @@ input[type=text], select
     font-size: 28px;
     color: #ffffff;
     text-decoration: none;
-    padding: 10px;
+    padding: 10px 0px 10px 0px;
     margin: 10px;
     width: 100%;
     display: inline-block;
@@ -59,4 +59,8 @@ input[type=text], select
     font-family: "Courier", "Courier new", monospace;
     font-size: 80px;
     text-align: center;
+}
+
+.hide-element {
+    display: none !important ;
 }

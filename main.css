@@ -9,7 +9,7 @@
  * {
     margin: 0;
     padding: 0;
-  }  
+  }
 
 /*styling header tag*/
 header {
@@ -35,7 +35,7 @@ header {
 /*styling nav tag which is inside header tag*/
 header nav {
     align-self: flex-end;
-    
+
 }
 
 /*styling links that inside nav tag which is inside header tag*/
@@ -60,7 +60,7 @@ header nav a:hover{
 /*style the content_container id*/
 #content_container {
     width: 800px;
-    border: 2px solid #CDCDCD;
+    border: 2px solid #e2d280;
     margin: 10px auto;
     padding: 10px;
 }
