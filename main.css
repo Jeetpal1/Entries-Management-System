@@ -60,7 +60,7 @@ header nav a:hover{
 /*style the content_container id*/
 #content_container {
     width: 800px;
-    border: 2px solid #e2d280;
+    border: 2px solid #CDCDCD;
     margin: 10px auto;
     padding: 10px;
 }

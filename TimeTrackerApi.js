@@ -11,8 +11,7 @@ class TimeTrackerApi {
 	 * @param {string} api_key The API key to be used for this connection
 	 * @param {string} base_url The base URL for the API calls
 	 */
-	constructor(api_key, base_url)
-	{
+	constructor(api_key, base_url) {
 		this.api_key = api_key;
 		this.base_url = base_url;
 
@@ -25,26 +24,25 @@ class TimeTrackerApi {
 	 * @param {object} parameters - An object with parameters to be sent as part of the request
 	 * @param {function|boolean} success_handler - A callback function that the caller can pass in to deal with the response from the request if it was successful.
 	 */
-	makeRequest(method, path, parameters = {}, success_handler = false)
-	{
+	makeRequest(method, path, parameters = {}, success_handler = false) {
 		console.log('----- makeRequest -----',
 			{
-				'method' : method,
-				'path' : path,
-				'handler': success_handler});
+				'method': method,
+				'path': path,
+				'handler': success_handler
+			});
 
 		// Create form data
 		let formData = new FormData();
 		// Add parameters
-		for(let key in parameters)
-		{
+		for (let key in parameters) {
 			formData.append(key, parameters[key]);
 		}
 
 		var xhr = new XMLHttpRequest();
 		xhr.open(method.toUpperCase(), this.base_url + path);
 		xhr.setRequestHeader('api-key', this.api_key);
-		xhr.setRequestHeader('api-source','2021-S')
+		xhr.setRequestHeader('api-source', '2021-S')
 		xhr.addEventListener('load', () => this.xhrRequestHander(xhr, success_handler));
 		xhr.send(formData);
 
@@ -57,17 +55,14 @@ class TimeTrackerApi {
 	 * @param {function|boolean} success_handler The callback function that should be called if the call was successful. This method
 	 * should be prepared to accept a parameter which will be the response object from the XHR.
 	 */
-	xhrRequestHander(xhr, success_handler = false)
-	{
+	xhrRequestHander(xhr, success_handler = false) {
 		let response = JSON.parse(xhr.response);
 
 		// Check for an error
-		if(response.error_message !== undefined)
-		{
+		if (response.error_message !== undefined) {
 			showError(response);
 		}
-		else if(typeof success_handler == "function")
-		{
+		else if (typeof success_handler == "function") {
 			success_handler(response);
 		}
 

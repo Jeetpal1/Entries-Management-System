@@ -7,4 +7,4 @@
 const api = new TimeTrackerApi(api_key_reports, api_url);
 
 // Load the reports after the DOM has loaded
-window.addEventListener('DOMContentLoaded',() => new Reports(api, company_id));
+window.addEventListener('DOMContentLoaded', () => new Reports(api, company_id));
