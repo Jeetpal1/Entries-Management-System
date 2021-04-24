@@ -13,7 +13,7 @@ let api_url = 'https://acs2909.lusciousorange.com/t-api/';
  */
 let api_key_time_tracking = 'bqyrkt6-g1yc5684fkdwh3q0-v2bsc78'; // PERSON A
 let api_key_reports = 'qc1pg27-hsfxy9kqdc1z38r1-3810bd0'; // PERSON B
-let api_key_projects = ''; // PERSON C
+let api_key_projects = '8q5rsc9-zrn6v3tqk4bj7ms5-7p3bjq0'; // PERSON C
 
 
 /**
