@@ -1,0 +1,81 @@
+/* font-sizes 14px text Arial
+ */
+*{
+  font-size: 14px;
+  font-family: arial;
+}
+
+/* setting width, position, padding , margin and color of the form */
+#project_form {
+  width: 300px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 100px;
+  background-color: #343434;
+  padding: 10px;
+  margin: auto;
+}
+
+/* styling project_form label */
+#project_form label{
+  padding: 5px;
+}
+
+/* styling submit_button */
+#submit_button {
+  background-color: #CDCDCD;
+  border: none;
+  color: #343434;
+  text-align: center;
+}
+
+/* styling title and submit_button */
+#title, #submit_button {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 5px;
+  margin-top: 10px;
+}
+
+#title{
+  color: #343434;
+}
+
+/* setting width, text, of the table */
+ #projects_table {
+  width: 100%;
+  text-align: center;
+  border-collapse: collapse;
+}
+
+/* styling table rows */
+th {
+  background-color: #CDCDCD;
+}
+
+/* styling table cells */
+td {
+  border-left: none;
+  border-right: none;
+  border-bottom: 1px solid #CDCDCD;
+  padding: 5px;
+}
+
+/* styling new_project_button with setting font_size, padding, background-color and margin */
+#new_project_button {
+  font-size: 28px;
+  padding: 10px;
+  background-color: #009900;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+/* hovering over button makes its opaque */
+#new_project_button:hover {
+  opacity: 80%;
+}
