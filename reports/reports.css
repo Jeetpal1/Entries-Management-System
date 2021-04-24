@@ -1,10 +1,4 @@
-/*Person B: Reports, Jeetpal Singh (3124275)*/
-
-/*To set default style for body*/
-* {
-  font-size:14px;
-  font-family:arial;
-}
+/*Person B: Reports, Jeetpal Singh (3124275) (Api-Key: qc1pg27-hsfxy9kqdc1z38r1-3810bd0)*/
 
 /*Styling the filter form*/
 #reports_filter_form {
@@ -13,6 +7,8 @@
   background-color:#CDCDCD;
   color:#343434;
 }
+
+/*styling reports' filter form items (i.e fields and labels) (adding padding and margin)*/
 #project_id,#user_id, label {
   padding:5px;
   margin:10px;
@@ -21,13 +17,19 @@
 #results  {
   width:100%;
 }
+
+/*styling table body to make it flex display to justify content with space-around*/
 #results thead tbody {
   display: flex;
   justify-content:space-around;
 }
+
+/*styling backgroung color of table headings*/
 #results thead{
   background-color:#CDCDCD;
 }
+
+/*styling cells of table*/
 #results td {
   border-bottom:1px solid #CDCDCD;
   padding:5px;

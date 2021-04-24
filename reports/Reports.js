@@ -1,7 +1,7 @@
 /**
  * A class that handles anything to do with the Reports view
  */
-//Person B: Reports, Jeetpal Singh (3124275) 
+//Person B: Reports, Jeetpal Singh (3124275) (Api-Key: qc1pg27-hsfxy9kqdc1z38r1-3810bd0)
 class Reports {
 	/**
 	 * creates Reports

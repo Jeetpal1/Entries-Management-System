@@ -1,6 +1,7 @@
 /**
  * A class that handles anything to do with the Projects view
  */
+//Person C: Projects: Jashandeep S. Bains
 class Projects {
 
 	/**
