@@ -1,7 +1,7 @@
 /**
  * A class that handles anything to do with the Reports view
  */
-//Person A: Time Tracker: Saman Fathnazarian
+//Person A: Time Tracker: 
 class Track {
     /**
      * Constructor for the Track. Initialize a new Track object.
